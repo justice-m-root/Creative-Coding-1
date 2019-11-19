@@ -1,0 +1,41 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="./Bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+            <script src="./Bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+            <script>
+            function validate(){
+var cheese= document.getElementById("fName").value;
+if (cheese==""){
+    document.getElementById("fName").style.backgroundColor= "red";
+    document.getElementById("fName").focus();
+}
+var apple= document.getElementById("lName").value;
+if (apple==""){
+    document.getElementById("lName").style.backgroundColor= "red";
+    document.getElementById("lName").focus();
+}
+var bread= document.getElementById("email").value;
+if (bread==""){
+    document.getElementById("email").style.backgroundColor= "red";
+    document.getElementById("email").focus();
+}
+
+            }
+            
+            </script>
+    </head>
+<title>Contact Us</title>
+<body>
+<h1>Contact Us</h1>
+    First Name: <input id="fName" required><br>
+    Last Name: <input id="lName" required><br>
+    Email: <input id="email" required><br>
+
+Do you Accept the Terms?<br>
+    <button id="Yes" type="Yes">Yes</button>
+    <button id="No" type="No">No</button>
+    <button id="Submit" onclick="validate();"> Submit</button>
+<a href="secondpage.html">Go to previous page</a>
+<a href="mathgame.html">Go to next page</a>
+</body>
+</html>

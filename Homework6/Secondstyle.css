@@ -1,0 +1,13 @@
+body {
+    background-image: url("snow.jpg");
+    background-color: #cccccc;
+   }
+   .blueColor{
+       color: crimson;
+   }
+   #button {
+       color: darkgreen;
+   }
+   #ham {
+       color: darkorchid;
+   }
