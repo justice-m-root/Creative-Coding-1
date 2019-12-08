@@ -1,0 +1,72 @@
+<html>
+    <title>for Loops</title>
+    
+    <head>
+    <script>
+        var actualAnswer;
+        var number1;
+        var number2;
+        var score = 0 
+        //if (answer == actual answer)
+        //{
+           // document.getElementById("score").value = score +1
+
+        //}
+        var counter = 0;
+        var missed = 0;
+        function printQuestion()
+        {
+            actualAnswer = number1 + number2;
+            document.getElementById("theQuestion").innerHTML = "What is " + number1 + "+" + number2 + "?";
+        }
+        function checkAnswer()
+        {
+            var answer = document.getElementById("txtAnswer").value;
+           if (counter < 10){
+            if(answer == actualAnswer)
+            {
+                document.getElementById("finalResult").innerHTML = "Good job!";
+                runGame();
+            score ++;
+            }
+            else
+            {
+                document.getElementById("finalResult").innerHTML = "Try Again!";
+            missed ++;
+            }
+           }
+            counter ++;
+            if (counter == 10)
+                {
+                document.getElementById("finalResult").innerHTML = "Score" + score + "Missed" + missed + "Percentage" + score / 10 * 100 + "%";
+                
+
+                }
+        //counter ++;
+        //counter = counter + 1
+        }
+        function runGame()
+        {
+            for(var i = 0; i < 5; i++)
+            {
+                 number1 = Math.floor(Math.random() * 10);
+                 number2 = Math.floor(Math.random() * 10);
+            }
+            printQuestion();
+        }
+    </script>
+    </head>
+    <body onload="runGame();">
+        <div id="theQuestion"></div>
+            <table>
+                <tr>
+                    <td>Your answer</td>
+                    <td><input type="text" id="txtAnswer"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button id="btnSubmit" onClick="checkAnswer();">Submit</button></td>
+                </tr>
+            </table>
+        <div id="finalResult"></div>
+    </body>
+ </html>
